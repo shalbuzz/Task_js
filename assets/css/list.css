@@ -1,0 +1,258 @@
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: #282a35;
+    padding: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-fluid .navbar-brand {
+    color: #fff;
+    font-weight: 800;
+    font-size: 2.25rem;
+}
+
+.navbar-nav a {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #04aa6d;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+}
+
+.containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.containers table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.containers th,
+.containers td {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.containers th {
+    background-color: #04aa6d;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.containers tr:nth-child(even) {
+    background-color: #a2a2a2;
+}
+
+.containers tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.containers tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.containers td a {
+    color: #04aa6d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.containers td a:hover {
+    color: #2a8b56;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.footer {
+    background-color: #282a35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.footer-text p {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #000000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    animation: rotation 3s linear infinite;
+    display: none;
+    
+}
+
+.loader::after {
+    content: '';  
+    position: absolute;
+    box-sizing: border-box;
+    left: 20px;
+    top: 31px;
+    border: 10px solid transparent;
+    border-right-color: #FFF;
+    transform: rotate(-40deg);
+}
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+  @media (max-width: 1024px) {
+    .container-fluid {
+        padding: 18px 20px;
+    }
+
+    .navbar-nav a {
+        font-size: 16px;
+        margin: 0 12px;
+    }
+
+    .containers th, .containers td {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .containers table {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .containers {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .containers td, .containers th {
+        padding: 10px;
+    }
+
+    .delete-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 15px 10px;
+    }
+
+    .navbar-nav a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+
+    .containers {
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+
+    .containers table {
+        width: 100%;
+        margin-top: 15px;
+        border-collapse: collapse;
+    }
+
+    .containers th, .containers td {
+        font-size: 14px;
+        padding: 8px 10px;
+        word-wrap: break-word;
+    }
+
+    .delete-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+
+    .containers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .containers tr:hover {
+        background-color: #f1f1f1;
+    }
+}
